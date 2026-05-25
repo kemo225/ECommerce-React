@@ -1,0 +1,13 @@
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.text { font-size: var(--text-sm); color: var(--body-text); line-height: 1.7; font-style: italic; }
+.author { font-size: var(--text-sm); font-weight: var(--fw-semibold); color: var(--charcoal); }

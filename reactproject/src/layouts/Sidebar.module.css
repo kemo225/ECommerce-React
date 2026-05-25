@@ -1,0 +1,141 @@
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-base), transform var(--transition-base);
+  z-index: 50;
+  height: 100%;
+}
+
+.sidebarCollapsed {
+  width: 80px;
+}
+
+.header {
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+  color: var(--charcoal);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  color: var(--muted);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.toggleBtn:hover {
+  background-color: var(--bg-main);
+  color: var(--charcoal);
+}
+
+.nav {
+  padding: var(--space-4) 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0 var(--space-3);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--body-text);
+  font-weight: var(--fw-medium);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.navItem:hover {
+  background-color: var(--bg-main);
+  color: var(--charcoal);
+}
+
+.navItemActive {
+  background-color: var(--gold-surface);
+  color: var(--gold-primary);
+  font-weight: var(--fw-semibold);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  transition: opacity var(--transition-fast);
+}
+
+.sidebarCollapsed .label {
+  opacity: 0;
+  width: 0;
+  display: none;
+}
+
+.mobileToggle {
+  display: none;
+  position: fixed;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--gold-primary);
+  color: white;
+  z-index: 60;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-overlay);
+  z-index: 40;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    width: 260px;
+  }
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+  .mobileToggle {
+    display: flex;
+  }
+  .overlayActive {
+    display: block;
+  }
+}

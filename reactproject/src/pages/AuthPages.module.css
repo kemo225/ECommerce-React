@@ -1,0 +1,84 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.inlineRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.checkboxLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--body-text);
+}
+
+.checkboxInput {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold-primary);
+}
+
+.helperLink {
+  color: var(--gold-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.helperLink:hover {
+  color: var(--gold-dark);
+}
+
+.submitBtn {
+  margin-top: var(--space-2);
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  color: #fff;
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-base);
+  padding: 12px 16px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-gold);
+}
+
+.submitBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.errorBanner {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(180, 35, 24, 0.2);
+  background: rgba(180, 35, 24, 0.08);
+  color: #8f1d14;
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+}
+
+.successBox {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(12, 117, 83, 0.22);
+  background: rgba(12, 117, 83, 0.08);
+  color: #0a5c41;
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+}
+
+.mutedText {
+  font-size: var(--text-sm);
+  color: var(--light-grey);
+}
+

@@ -1,0 +1,112 @@
+.footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.75);
+  padding-top: var(--space-16);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: var(--space-10);
+  padding-bottom: var(--space-12);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: #fff;
+  margin-bottom: var(--space-4);
+}
+
+.tagline {
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+  max-width: 280px;
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-3);
+}
+.Padbottom {
+  padding-bottom: 20px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+}
+
+.socialIcon:hover {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.colTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-5);
+}
+
+.colList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.colList a {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.65);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.colList a:hover {
+  color: var(--gold-light);
+  padding-left: 4px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.contactIcon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--gold-light);
+  font-size: 1rem;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-5) 0;
+  font-size: var(--text-xs);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 992px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+}
+
+@media (max-width: 576px) {
+  .grid { grid-template-columns: 1fr; gap: var(--space-6); }
+}

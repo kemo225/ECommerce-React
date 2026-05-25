@@ -1,0 +1,83 @@
+.hero {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/maldives.png');
+  background-size: cover;
+  background-position: center;
+  margin-top: var(--navbar-height);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,19,43,0.5) 0%, rgba(11,19,43,0.7) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-16) var(--space-6);
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #fff;
+  margin-bottom: var(--space-4);
+}
+
+.heroSubtitle {
+  font-size: var(--text-base);
+  color: rgba(255,255,255,0.85);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.formWrap {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.formTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--charcoal);
+  margin-bottom: var(--space-2);
+}
+
+.formSubtitle {
+  font-size: var(--text-sm);
+  color: var(--gold-primary);
+  margin-bottom: var(--space-6);
+}
+
+.form { display: flex; flex-direction: column; gap: var(--space-5); }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+
+.field { display: flex; flex-direction: column; gap: var(--space-2); }
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  color: var(--charcoal);
+}
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+}
