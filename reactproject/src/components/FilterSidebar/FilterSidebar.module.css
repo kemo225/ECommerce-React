@@ -1,0 +1,143 @@
+.sidebar {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-6));
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  color: var(--charcoal);
+}
+
+.clear {
+  font-size: var(--text-sm);
+  color: var(--gold-primary);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.clear:hover { text-decoration: underline; }
+
+.group {
+  margin-bottom: var(--space-6);
+}
+
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--charcoal);
+  margin-bottom: var(--space-3);
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceValue {
+  font-size: var(--text-xs);
+  color: var(--light-grey);
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--charcoal);
+  background: var(--bg-card);
+  cursor: pointer;
+  appearance: auto;
+}
+
+.input {
+  cursor: text;
+}
+
+
+.range {
+  width: 100%;
+  margin-top: var(--space-2);
+  accent-color: var(--gold-primary);
+  cursor: pointer;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.checkbox,
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--body-text);
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"],
+.checkboxLabel input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold-primary);
+  cursor: pointer;
+}
+
+
+.ratingBtns {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.ratingBtn {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  color: var(--body-text);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ratingBtn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+}
+
+.ratingActive {
+  background: var(--gold-primary);
+  color: #fff;
+  border-color: var(--gold-primary);
+}
+
+.ratingActive:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .sidebar { position: static; }
+}
