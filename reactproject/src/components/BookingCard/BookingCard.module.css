@@ -1,0 +1,37 @@
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-6));
+}
+.priceRow { margin-bottom: var(--space-5); }
+.price { font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: var(--fw-bold); color: var(--charcoal); }
+.per { font-size: var(--text-sm); color: var(--light-grey); }
+.includesList { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6); }
+.includeItem { display: flex; align-items: flex-start; gap: var(--space-2); font-size: var(--text-sm); color: var(--body-text); line-height: 1.5; }
+.checkIcon { flex-shrink: 0; color: var(--success); font-size: 1.1rem; margin-top: 2px; }
+.whatsappBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--success);
+  color: #fff;
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.whatsappBtn:hover { background: var(--success-dark); transform: translateY(-1px); }
+.waIcon { font-size: 1.2rem; }
+.note { margin-top: var(--space-3); font-size: var(--text-xs); color: var(--muted); text-align: center; }
+
+@media (max-width: 768px) {
+  .card { position: static; }
+}

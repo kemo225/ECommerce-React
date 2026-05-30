@@ -1,0 +1,10 @@
+.wrapper { display: inline-flex; align-items: center; gap: var(--space-2); }
+.stars { display: flex; gap: 1px; }
+.filled { color: var(--star); }
+.empty { color: var(--border); }
+.value { font-size: var(--text-sm); font-weight: var(--fw-semibold); color: var(--charcoal); }
+.sm .stars { font-size: 0.85rem; }
+.sm .value { font-size: var(--text-xs); }
+.md .stars { font-size: 1.05rem; }
+.lg .stars { font-size: 1.3rem; }
+.lg .value { font-size: var(--text-base); }

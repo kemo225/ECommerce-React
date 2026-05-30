@@ -1,0 +1,9 @@
+.layout{
+  min-height:100vh;
+  background:var(--bg-main);
+}
+
+.shell{
+  display:flex;
+  width:100%;
+}
